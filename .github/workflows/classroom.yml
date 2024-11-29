@@ -79,13 +79,8 @@ jobs:
     with:
       service-name: gateway
     secrets:
-      GATEWAY_EXT_PORT: ${{ secrets.GATEWAY_EXT_PORT }}
-      LIBRARY_SYSTEM_EXT_PORT: ${{ secrets.LIBRARY_SYSTEM_EXT_PORT }}
-      RESERVATION_SYSTEM_EXT_PORT: ${{ secrets.RESERVATION_SYSTEM_EXT_PORT }}
-      RATING_SYSTEM_EXT_PORT: ${{ secrets.RATING_SYSTEM_EXT_PORT }}
-      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-      DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-      DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      POSTGRESQL_DSN: ""
+      KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
   deploy-library-system:
     name: Deploy library-system
@@ -94,13 +89,8 @@ jobs:
     with:
       service-name: library-system
     secrets:
-      GATEWAY_EXT_PORT: ${{ secrets.GATEWAY_EXT_PORT }}
-      LIBRARY_SYSTEM_EXT_PORT: ${{ secrets.LIBRARY_SYSTEM_EXT_PORT }}
-      RESERVATION_SYSTEM_EXT_PORT: ${{ secrets.RESERVATION_SYSTEM_EXT_PORT }}
-      RATING_SYSTEM_EXT_PORT: ${{ secrets.RATING_SYSTEM_EXT_PORT }}
-      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-      DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-      DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      POSTGRESQL_DSN: ${{ secrets.LIBRARY_SYSTEM_POSTGRESQL_DSN }}
+      KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
   deploy-rating-system:
     name: Deploy rating-system
@@ -109,13 +99,8 @@ jobs:
     with:
       service-name: rating-system
     secrets:
-      GATEWAY_EXT_PORT: ${{ secrets.GATEWAY_EXT_PORT }}
-      LIBRARY_SYSTEM_EXT_PORT: ${{ secrets.LIBRARY_SYSTEM_EXT_PORT }}
-      RESERVATION_SYSTEM_EXT_PORT: ${{ secrets.RESERVATION_SYSTEM_EXT_PORT }}
-      RATING_SYSTEM_EXT_PORT: ${{ secrets.RATING_SYSTEM_EXT_PORT }}
-      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-      DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-      DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      POSTGRESQL_DSN: ${{ secrets.RATING_SYSTEM_POSTGRESQL_DSN }}
+      KUBECONFIG: ${{ secrets.KUBECONFIG }}
       
   deploy-reservation-system:
     name: Deploy reservation-system
@@ -124,13 +109,8 @@ jobs:
     with:
       service-name: reservation-system
     secrets:
-      GATEWAY_EXT_PORT: ${{ secrets.GATEWAY_EXT_PORT }}
-      LIBRARY_SYSTEM_EXT_PORT: ${{ secrets.LIBRARY_SYSTEM_EXT_PORT }}
-      RESERVATION_SYSTEM_EXT_PORT: ${{ secrets.RESERVATION_SYSTEM_EXT_PORT }}
-      RATING_SYSTEM_EXT_PORT: ${{ secrets.RATING_SYSTEM_EXT_PORT }}
-      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-      DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-      DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      POSTGRESQL_DSN: ${{ secrets.RESERVATION_SYSTEM_POSTGRESQL_DSN }}
+      KUBECONFIG: ${{ secrets.KUBECONFIG }}
       
   autograding:
     name: Autograding
