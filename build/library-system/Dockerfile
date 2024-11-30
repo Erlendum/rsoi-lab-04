@@ -38,6 +38,6 @@ WORKDIR /usr/bin
 
 COPY --from=build /go/src/app /go
 COPY ./configs configs
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT /go/bin/library-system
