@@ -4,7 +4,7 @@
 	"values": [
 		{
 			"key": "baseUrl",
-			"value": "http://zhremarket.ru:8080",
+			"value": "http://103.74.94.186:31236/erlendum/gateway",
 			"enabled": true
 		}
 	],
