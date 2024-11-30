@@ -35,7 +35,7 @@ jobs:
       - name: Helm chart install
         run: >
           helm upgrade --install --create-namespace --namespace erlendum
-          --set 'image.tag=${{ github.sha }}'
+          --set 'image.tag=latest'
           --set 'postgresql.dsn=${{ secrets.POSTGRESQL_DSN }}'
           --dependency-update
           -f  deployments/${{ inputs.service-name }}/values.yaml
