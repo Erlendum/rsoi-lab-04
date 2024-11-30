@@ -4,7 +4,7 @@ namespace: erlendum
 replicaCount: 1
 
 image:
-  repository: elrendum/rsoi-lab-02-reservation-system
+  repository: erlendum/rsoi-lab-02-reservation-system
   tag: latest
 
 postgresql:

@@ -19,7 +19,7 @@ spec:
         - name: service
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           command:
-            - /opt/{{ .Values.name }}
+            - /go/bin/{{ .Values.name }}
           imagePullPolicy: IfNotPresent
           env:
             - name: POSTGRESQL_DSN

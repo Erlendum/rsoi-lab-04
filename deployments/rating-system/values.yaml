@@ -4,7 +4,7 @@ namespace: erlendum
 replicaCount: 1
 
 image:
-  repository: elrendum/rsoi-lab-02-rating-system
+  repository: erlendum/rsoi-lab-02-rating-system
   tag: latest
 
 postgresql:

@@ -4,7 +4,7 @@ namespace: erlendum
 replicaCount: 1
 
 image:
-  repository: elrendum/rsoi-lab-02-gateway
+  repository: erlendum/rsoi-lab-02-gateway
   tag: latest
 
 postgresql:
