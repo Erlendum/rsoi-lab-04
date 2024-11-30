@@ -60,7 +60,7 @@ func (s *server) Init() error {
 }
 
 func (s *server) Run() error {
-	log.Info().Msg("server has been started")
+	log.Info().Msgf("server has been started, address: %s", s.cfg.Address)
 	return s.echo.StartServer(s.echo.Server)
 }
 
